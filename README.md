@@ -51,7 +51,20 @@
 ---
 
 ## 📸 Screenshots
-*(Add relevant screenshots of your app interface here)*
+<table>
+  <tr>
+    <td><img src="images_for_readme/4.1-Screen 1-State 1.png" alt="Screen 1-State 1" width="300" /></td>
+    <td><img src="images_for_readme/2.1-Screen 3.png" alt="Screen 3" width="300" /></td>
+    <td><img src="images_for_readme/3.1-Screen 4.png" alt="Screen 4" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="images_for_readme/1.1-Screen 2.png" alt="Screen 2" width="300" /></td>
+    <td><img src="images_for_readme/4.2-Screen 1-State 2.png" alt="Screen 1-State 2" width="300" /></td>
+    <td><img src="images_for_readme/5.1-Screen 5.png" alt="Screen 5" width="300" /></td>
+  </tr>
+</table>
+
+
 
 ---
 
