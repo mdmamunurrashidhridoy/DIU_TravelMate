@@ -89,6 +89,21 @@
 
 ---
 
+## 👥 Team
+<img src="images_for_readme/Team-.png" />
+
+### Lead Developer & Engineer-
+
+#### MD Moshiur Rahman  
+[![GitHub](https://img.shields.io/badge/GitHub-moshiurr4766-blue?logo=github)](https://github.com/moshiurr4766)  
+
+MD Moshiur Rahman is a skilled software engineer with expertise in scalable system design, backend development, and modern frameworks. He has strong proficiency in **Flutter**, enabling the development of high-performance cross-platform applications. With a passion for innovation, he plays a crucial role in driving our projects forward.  
+
+Explore his work on [GitHub](https://github.com/moshiurr4766)!  
+
+
+---
+
 ## 🤝 Contributing
 We welcome contributions! Feel free to submit a pull request or open an issue for discussion.
 
