@@ -66,6 +66,8 @@ class DrawerD extends StatelessWidget {
     return username.trim()[0].toUpperCase();
   }
 
+
+
   @override
   Widget build(BuildContext context) {
     // Get Theme state and provider
@@ -129,7 +131,7 @@ class DrawerD extends StatelessWidget {
             Navigator.pushNamed(context, '/nav');
             // TODO: Navigate home
           }),
-         
+
           _drawerItem(
             Iconsax.setting_outline,
             'Settings',
@@ -225,57 +227,54 @@ class DrawerD extends StatelessWidget {
           // ----------------------
           const Divider(), // Separator before logout
           // --- Logout Item ---
-          _drawerItem(
-            Iconsax.logout_outline,
-            'Logout',
-            iconColor,
-            textColor,
-            () async {
-              // ... (logout logic remains the same) ...
-              Navigator.pop(context); // Close drawer first
-              bool? confirmLogout = await showDialog<bool>(
-                context: context, // Provide the BuildContext
-                barrierDismissible:
-                    false, // Optional: Prevents closing by tapping outside
-                builder: (BuildContext dialogContext) {
-                  // The builder function creates the dialog
-                  return AlertDialog(
-                    title: const Text('Confirm Logout'),
-                    content: const Text('Are you sure you want to log out?'),
-                    actions: <Widget>[
-                      TextButton(
-                        child: const Text('Cancel'),
-                        onPressed: () {
-                          // Close the dialog and return 'false'
-                          Navigator.of(dialogContext).pop(false);
-                        },
-                      ),
-                      TextButton(
-                        child: const Text('Logout'),
-                        onPressed: () {
-                          // Close the dialog and return 'true'
-                          Navigator.of(dialogContext).pop(true);
-                        },
-                      ),
-                    ],
-                  );
-                }, // End of builder function
-              );
-              if (confirmLogout == true && context.mounted) {
-                try {
-                  context.read<UserDataProvider>().clearUserData();
-                  await FirebaseAuth.instance.signOut();
-                  Navigator.pushNamedAndRemoveUntil(
-                    context,
-                    '/login',
-                    (route) => false,
-                  );
-                } catch (e) {
-                  /* ... error handling ... */
-                }
-              }
-            },
-          ),
+          // _drawerItem(
+          //   Iconsax.logout_outline,
+          //   'Logout',
+          //   iconColor,
+          //   textColor,
+          //   () async {
+          //     // ... (logout logic remains the same) ...
+          //     Navigator.pop(context); // Close drawer first
+          //     bool? confirmLogout = await showDialog<bool>(
+          //       context: context, // Provide the BuildContext
+          //       barrierDismissible:
+          //           false, // Optional: Prevents closing by tapping outside
+          //       builder: (BuildContext dialogContext) {
+          //         // The builder function creates the dialog
+          //         return AlertDialog(
+          //           title: const Text('Confirm Logout'),
+          //           content: const Text('Are you sure you want to log out?'),
+          //           actions: <Widget>[
+          //             TextButton(
+          //               child: const Text('Cancel'),
+          //               onPressed: () {
+          //                 // Close the dialog and return 'false'
+          //                 Navigator.of(dialogContext).pop(false);
+          //               },
+          //             ),
+          //             TextButton(
+          //               child: const Text('Logout'),
+          //               onPressed: _confirmLogout,
+          //             ),
+          //           ],
+          //         );
+          //       }, // End of builder function
+          //     );
+          //     if (confirmLogout == true && context.mounted) {
+          //       try {
+          //         context.read<UserDataProvider>().clearUserData();
+          //         await FirebaseAuth.instance.signOut();
+          //         Navigator.pushNamedAndRemoveUntil(
+          //           context,
+          //           '/login',
+          //           (route) => false,
+          //         );
+          //       } catch (e) {
+          //         /* ... error handling ... */
+          //       }
+          //     }
+          //   },
+          // ),
         ],
       ),
     );
@@ -372,4 +371,3 @@ class _NavBottomState extends State<NavBottom> {
 }
 
 // ObjectBox Schedule Model
-

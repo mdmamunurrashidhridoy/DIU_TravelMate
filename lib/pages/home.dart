@@ -1,7 +1,10 @@
 import 'dart:async';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:tarvel_mate/pages/bookingcard.dart';
 import 'package:tarvel_mate/pages/design_tm.dart';
 import 'package:tarvel_mate/utils/constants/colors.dart';
+import 'package:tarvel_mate/pages/bookingcard.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -20,10 +23,18 @@ class _HomeState extends State<Home> {
     'assets/image/banner/5.jpg',
   ];
 
+  Future<List<Map<String, dynamic>>> fetchBookings() async {
+    // Replace with your actual data fetching logic
+    // Example for Firestore:
+    final snapshot =
+        await FirebaseFirestore.instance.collection('bookings').get();
+    return snapshot.docs.map((doc) => doc.data()).toList();
+  }
+
   @override
   void initState() {
     super.initState();
-    _pageController = PageController(); 
+    _pageController = PageController();
 
     Timer.periodic(Duration(seconds: 10), (timer) {
       if (_currentPage < images.length - 1) {
@@ -83,9 +94,7 @@ class _HomeState extends State<Home> {
               SizedBox(height: 20),
               Text(
                 " What services do you need?",
-                style: TextStyle(
-                  fontSize: 16, 
-                  fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 20),
               GridView.count(
@@ -101,49 +110,23 @@ class _HomeState extends State<Home> {
 
               SizedBox(height: 20),
 
-              Card(
-                child: Container(
-                padding: EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Text(
-                        "You don't have any ongoing order",
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(height: 10),
-                      Text("Need a service today?"),
-                      SizedBox(height: 10),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: FColors.primarypurple,
-                        ),
-                        child: Text("Ticket Cancel",
-                          style: TextStyle(
-                            color: Colors.white,
-                
-                          ),
-                        ),
-                      ),
-                    ]
-                  ),
-                ),
-              ),
-
+             BookingsCard(),
 
               SizedBox(height: 20),
 
               Card(
                 child: Container(
-                padding: EdgeInsets.all(16),
-                
+                  padding: EdgeInsets.all(16),
+
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Text(
                         "You don't have any ongoing order",
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       SizedBox(height: 10),
                       Text("Need a service today?"),
@@ -153,14 +136,12 @@ class _HomeState extends State<Home> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: FColors.primarypurple,
                         ),
-                        child: Text("Ticket Book",
-                          style: TextStyle(
-                            color: Colors.white,
-                
-                          ),
+                        child: Text(
+                          "Ticket Book",
+                          style: TextStyle(color: Colors.white),
                         ),
                       ),
-                    ]
+                    ],
                   ),
                 ),
               ),
@@ -204,7 +185,7 @@ Widget _serviceCard(String title, IconData icon) {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon,  size: 30),
+          Icon(icon, size: 30),
           SizedBox(height: 5),
           Text(title, style: TextStyle(fontSize: 14)),
         ],

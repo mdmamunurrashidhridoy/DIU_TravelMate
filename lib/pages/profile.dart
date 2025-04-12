@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:tarvel_mate/userdata/userdataprovider.dart';
 import 'package:tarvel_mate/userdata/userprofile.dart';
+import 'package:tarvel_mate/pages/bookingcard.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -40,14 +41,14 @@ class _ProfilePageState extends State<ProfilePage> {
     try {
       await context.read<UserDataProvider>().fetchUserData();
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Profile refreshed')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('Profile refreshed')));
     } catch (e) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error refreshing profile: $e')),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('Error refreshing profile: $e')));
     }
   }
 
@@ -71,7 +72,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(height: 20),
                 CircleAvatar(
                   radius: 50,
-                  backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+                  backgroundColor:
+                      Theme.of(context).colorScheme.primaryContainer,
                   child: Text(
                     _getInitials(userProfile.username),
                     style: TextStyle(
@@ -91,9 +93,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(height: 5),
                 Text(
                   userProfile.email,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Colors.grey[600],
-                  ),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.bodyMedium?.copyWith(color: Colors.grey[600]),
                 ),
               ],
             ),
@@ -131,6 +133,8 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             const SizedBox(height: 30),
+            BookingsCard(),
+            const SizedBox(height: 30),
             Center(
               child: ConstrainedBox(
                 constraints: const BoxConstraints(maxWidth: 300),
@@ -158,15 +162,15 @@ class _ProfilePageState extends State<ProfilePage> {
       leading: Icon(icon, color: Theme.of(context).colorScheme.primary),
       title: Text(
         title,
-        style: Theme.of(context).textTheme.titleSmall?.copyWith(
-          color: Colors.grey[600],
-        ),
+        style: Theme.of(
+          context,
+        ).textTheme.titleSmall?.copyWith(color: Colors.grey[600]),
       ),
       subtitle: Text(
         value,
-        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-          fontWeight: FontWeight.w500,
-        ),
+        style: Theme.of(
+          context,
+        ).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w500),
       ),
       dense: true,
     );
@@ -175,20 +179,21 @@ class _ProfilePageState extends State<ProfilePage> {
   Future<void> _confirmLogout() async {
     final confirm = await showDialog<bool>(
       context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Confirm Logout'),
-        content: const Text('Are you sure you want to log out?'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context, false),
-            child: const Text('Cancel'),
+      builder:
+          (context) => AlertDialog(
+            title: const Text('Confirm Logout'),
+            content: const Text('Are you sure you want to log out?'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context, false),
+                child: const Text('Cancel'),
+              ),
+              TextButton(
+                onPressed: () => Navigator.pop(context, true),
+                child: const Text('Logout'),
+              ),
+            ],
           ),
-          TextButton(
-            onPressed: () => Navigator.pop(context, true),
-            child: const Text('Logout'),
-          ),
-        ],
-      ),
     );
 
     if (confirm == true && mounted) {
@@ -196,11 +201,7 @@ class _ProfilePageState extends State<ProfilePage> {
         await FirebaseAuth.instance.signOut();
         context.read<UserDataProvider>().clearUserData();
         if (!mounted) return;
-        Navigator.pushNamedAndRemoveUntil(
-          context,
-          '/login',
-          (route) => false,
-        );
+        Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
       } catch (e) {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(

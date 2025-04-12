@@ -162,57 +162,58 @@ class ScheduleCard extends StatelessWidget {
   const ScheduleCard({super.key, required this.schedule});
 
   Future<void> _bookTicket(BuildContext context) async {
-    // Show loading dialog
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) => const Center(child: CircularProgressIndicator()),
-    );
+  // Show loading dialog
+  showDialog(
+    context: context,
+    barrierDismissible: false,
+    builder: (context) => const Center(child: CircularProgressIndicator()),
+  );
 
-    try {
-      final user =
-          FirebaseAuth
-              .instance
-              .currentUser!; // Using ! since we assume signed in
+  try {
+    final user = FirebaseAuth.instance.currentUser!;
+    final bookingRef = FirebaseFirestore.instance.collection('bookings').doc();
+    
+    final booking = {
+      'userId': user.uid,
+      'routeId': schedule.routeId,
+      'busname': schedule.busname ?? 'Unknown Bus',
+      'from': schedule.from ?? 'Unknown',
+      'to': schedule.to ?? 'Unknown',
+      'time': schedule.time ?? 'Unknown',
+      'bookingTime': Timestamp.now(),
+      'status': 'confirmed',
+    };
 
-      final booking = Booking(
-        userId: user.uid,
-        routeId: schedule.routeId,
-        busname: schedule.busname ?? 'Unknown Bus',
-        from: schedule.from ?? 'Unknown',
-        to: schedule.to ?? 'Unknown',
-        time: schedule.time ?? 'Unknown',
-        bookingTime: DateTime.now(),
-      );
+    // Use batch write if you need atomic operations
+    await bookingRef.set(booking);
 
-      // Add booking to Firestore
-      await FirebaseFirestore.instance
-          .collection('bookings')
-          .add(booking.toMap());
+    // Close loading dialog
+    if (context.mounted) Navigator.of(context).pop();
 
-      // Close loading dialog
-      if (context.mounted) Navigator.of(context).pop();
-
-      // Show success message
+    // Show success message
+    if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Booking successful!'),
-          duration: Duration(seconds: 2),
+          backgroundColor: Colors.green,
         ),
       );
-    } catch (e) {
-      // Close loading dialog if still mounted
-      if (context.mounted) Navigator.of(context).pop();
+    }
+  } catch (e) {
+    // Close loading dialog if still mounted
+    if (context.mounted) Navigator.of(context).pop();
 
-      // Show error message
+    // Show error message
+    if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Error: ${e.toString()}'),
-          duration: Duration(seconds: 2),
+          content: Text('Booking failed: ${e.toString()}'),
+          backgroundColor: Colors.red,
         ),
       );
     }
   }
+}
 
   @override
   @override
