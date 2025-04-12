@@ -110,41 +110,7 @@ class _HomeState extends State<Home> {
 
               SizedBox(height: 20),
 
-             BookingsCard(),
-
-              SizedBox(height: 20),
-
-              Card(
-                child: Container(
-                  padding: EdgeInsets.all(16),
-
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Text(
-                        "You don't have any ongoing order",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 10),
-                      Text("Need a service today?"),
-                      SizedBox(height: 10),
-                      ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: FColors.primarypurple,
-                        ),
-                        child: Text(
-                          "Ticket Book",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              BookingsCard(),
             ],
           ),
         ),
