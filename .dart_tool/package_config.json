@@ -8,6 +8,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "archive",
+      "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/archive-4.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "args",
       "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/args-2.7.0",
       "packageUri": "lib/",
@@ -28,6 +34,18 @@
     {
       "name": "characters",
       "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/characters-1.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "checked_yaml",
+      "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "cli_util",
+      "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/cli_util-0.4.2",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -152,10 +170,10 @@
       "languageVersion": "3.7"
     },
     {
-      "name": "flutter_lints",
-      "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/flutter_lints-5.0.0",
+      "name": "flutter_launcher_icons",
+      "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.14.3",
       "packageUri": "lib/",
-      "languageVersion": "3.5"
+      "languageVersion": "3.0"
     },
     {
       "name": "flutter_map",
@@ -296,10 +314,22 @@
       "languageVersion": "2.16"
     },
     {
+      "name": "image",
+      "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/image-4.5.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "intl",
       "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/intl-0.20.2",
       "packageUri": "lib/",
       "languageVersion": "3.3"
+    },
+    {
+      "name": "json_annotation",
+      "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/json_annotation-4.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "latlong2",
@@ -324,12 +354,6 @@
       "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.2"
-    },
-    {
-      "name": "lints",
-      "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/lints-5.1.1",
-      "packageUri": "lib/",
-      "languageVersion": "3.6"
     },
     {
       "name": "lists",
@@ -456,6 +480,12 @@
       "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/polylabel-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.13"
+    },
+    {
+      "name": "posix",
+      "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/posix-6.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "proj4dart",
@@ -644,13 +674,19 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "yaml",
+      "rootUri": "file:///home/hridoy/.pub-cache/hosted/pub.dev/yaml-3.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
       "name": "tarvel_mate",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     }
   ],
-  "generated": "2025-04-12T06:48:51.774417Z",
+  "generated": "2025-04-12T10:42:54.245546Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///home/hridoy/development/flutter",

@@ -12,34 +12,40 @@ class _BusInfoState extends State<BusInfo> {
 
   final List<Map<String, String>> items = [
     {
-      'title': 'Mountain View',
-      'subtitle': 'Swiss Alps',
-      'description': 'Beautiful mountain landscape with snow-covered peaks and clear blue sky.',
-      'image': 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+      'title': 'Hino RK1J',
+      'subtitle': 'Popular Student Bus',
+      'description': 'The Hino RK1J is one of the most common buses used for student transportation in Bangladesh. Known for its reliability and durability in Bangladeshi road conditions.',
+      'image': 'https://live.staticflickr.com/1625/24952336546_f8730e7aba_b.jpg'
     },
     {
-      'title': 'Beach Paradise',
-      'subtitle': 'Maldives',
-      'description': 'White sandy beach with crystal clear water and palm trees.',
-      'image': 'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+      'title': 'Toyota Coaster',
+      'subtitle': 'Premium Student Transport',
+      'description': 'The Toyota Coaster is a higher-end option for student transportation, often used by prestigious institutions. Features comfortable seating and better suspension.',
+      'image': 'https://media.toyota-gib.com/web/models/coaster/hzb70-zgmss/hzb70-zgmss-g1.webp'
     },
     {
-      'title': 'City Lights',
-      'subtitle': 'New York',
-      'description': 'Night view of skyscrapers with colorful lights reflecting on the river.',
-      'image': 'https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+      'title': 'Nissan Civilian',
+      'subtitle': 'Mid-range Student Bus',
+      'description': 'The Nissan Civilian is another popular choice for school buses in Bangladesh. It offers a balance between affordability and comfort for daily student commutes.',
+      'image': 'https://www.nissanbd.com/assets/img/civilian/sx-new.jpg'
     },
     {
-      'title': 'Forest Trail',
-      'subtitle': 'Amazon Rainforest',
-      'description': 'Mysterious green forest with sunlight filtering through the trees.',
-      'image': 'https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+      'title': 'Mitsubishi Fuso',
+      'subtitle': 'Durable School Bus',
+      'description': 'Mitsubishi Fuso buses are widely used for student transportation due to their rugged build quality and ability to handle Bangladesh\'s diverse road conditions.',
+      'image': 'https://www.borokomotors.com/wp-content/uploads/2023/05/Mitsubishi-Fuso-FUSO-2022-30-Seater-BUS-Light-Duty-MANUAL-5-SPEED-4.2L-4X2-DIESEL.jpg'
     },
     {
-      'title': 'Desert Sunset',
-      'subtitle': 'Sahara',
-      'description': 'Golden sand dunes under a spectacular sunset with dramatic clouds.',
-      'image': 'https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+      'title': 'Ashok Leyland',
+      'subtitle': 'Economical Choice',
+      'description': 'Ashok Leyland buses from India are becoming increasingly popular in Bangladesh as cost-effective options for student transportation with decent comfort levels.',
+      'image': 'https://5.imimg.com/data5/UH/MK/DX/SELLER-23845287/ashok-leyland-12m-fe-diesel-bus.png'
+    },
+    {
+      'title': 'TATA Starbus',
+      'subtitle': 'Modern School Bus',
+      'description': 'The TATA Starbus is a newer model being adopted by some institutions, featuring improved safety features and more comfortable seating arrangements.',
+      'image': 'https://buscdn.cardekho.com/in/tata/starbus-city/tata-starbus-city.jpg'
     },
   ];
 
