@@ -1,34 +1,29 @@
 import 'package:flutter/material.dart';
 
-
 class TransportApp extends StatelessWidget {
+  const TransportApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: HomeScreen(),
     );
   }
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Transport App"),
         actions: [
-          IconButton(
-            icon: Icon(Icons.notifications),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(Icons.person),
-            onPressed: () {},
-          ),
+          IconButton(icon: Icon(Icons.notifications), onPressed: () {}),
+          IconButton(icon: Icon(Icons.person), onPressed: () {}),
         ],
       ),
       body: Padding(
@@ -47,7 +42,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            
+
             // Quick Access Buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -58,23 +53,33 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 20),
-            
+
             // Ride Booking Section
             Card(
               elevation: 4,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
               child: Padding(
                 padding: EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Book a Ride", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                    Text(
+                      "Book a Ride",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     SizedBox(height: 10),
                     TextField(
                       decoration: InputDecoration(
                         hintText: "Pickup Location",
                         prefixIcon: Icon(Icons.location_on),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -82,15 +87,19 @@ class HomeScreen extends StatelessWidget {
                       decoration: InputDecoration(
                         hintText: "Drop-off Location",
                         prefixIcon: Icon(Icons.location_on),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
                     ),
                     SizedBox(height: 10),
                     ElevatedButton(
                       onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(double.infinity, 50),
+                      ),
                       child: Text("Find a Ride"),
-                      style: ElevatedButton.styleFrom(minimumSize: Size(double.infinity, 50)),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -98,13 +107,19 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      
+
       // Bottom Navigation Bar
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: "Bookings"),
-          BottomNavigationBarItem(icon: Icon(Icons.account_balance_wallet), label: "Wallet"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_today),
+            label: "Bookings",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_balance_wallet),
+            label: "Wallet",
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
       ),
@@ -116,9 +131,9 @@ class HomeScreen extends StatelessWidget {
 class QuickAccessButton extends StatelessWidget {
   final IconData icon;
   final String label;
-  
-  QuickAccessButton({required this.icon, required this.label});
-  
+
+  const QuickAccessButton({super.key, required this.icon, required this.label});
+
   @override
   Widget build(BuildContext context) {
     return Column(

@@ -14,16 +14,16 @@ class _HomeState extends State<Home> {
   late PageController _pageController;
   int _currentPage = 0;
   final List<String> images = [
-    'assets/image/banner/b1.jpg',
-    'assets/image/banner/b2.jpg',
-    'assets/image/banner/b3.jpg',
-    'assets/image/banner/b1.jpg',
+    'assets/image/banner/3.jpg',
+    'assets/image/banner/4.jpg',
+    'assets/image/banner/1.jpg',
+    'assets/image/banner/5.jpg',
   ];
 
   @override
   void initState() {
     super.initState();
-    _pageController = PageController(); // No viewportFraction, full width
+    _pageController = PageController(); 
 
     Timer.periodic(Duration(seconds: 10), (timer) {
       if (_currentPage < images.length - 1) {
@@ -51,7 +51,8 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppbarTop(),
+      // appBar: AppbarTop(),
+      // drawer: DrawerD(),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(20),
@@ -66,7 +67,7 @@ class _HomeState extends State<Home> {
                   width: double.infinity, // Full width
                   child: PageView.builder(
                     controller: _pageController,
-                    physics: NeverScrollableScrollPhysics(), // Disable manual scroll
+                    //physics: NeverScrollableScrollPhysics(), // Disable manual scroll
                     itemCount: images.length,
                     itemBuilder: (context, index) {
                       return Padding(
@@ -100,70 +101,67 @@ class _HomeState extends State<Home> {
 
               SizedBox(height: 20),
 
-              Container(
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(10),
-              ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Text(
-                      "You don't have any ongoing order",
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(height: 10),
-                    Text("Need a service today?"),
-                    SizedBox(height: 10),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: FColors.primarypurple,
+              Card(
+                child: Container(
+                padding: EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(
+                        "You don't have any ongoing order",
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       ),
-                      child: Text("Ticket Cancel",
-                        style: TextStyle(
-                          color: Colors.white,
-
+                      SizedBox(height: 10),
+                      Text("Need a service today?"),
+                      SizedBox(height: 10),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: FColors.primarypurple,
+                        ),
+                        child: Text("Ticket Cancel",
+                          style: TextStyle(
+                            color: Colors.white,
+                
+                          ),
                         ),
                       ),
-                    ),
-                  ]
+                    ]
+                  ),
                 ),
               ),
 
 
               SizedBox(height: 20),
 
-              Container(
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(10),
-              ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Text(
-                      "You don't have any ongoing order",
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(height: 10),
-                    Text("Need a service today?"),
-                    SizedBox(height: 10),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: FColors.primarypurple,
+              Card(
+                child: Container(
+                padding: EdgeInsets.all(16),
+                
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(
+                        "You don't have any ongoing order",
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       ),
-                      child: Text("Ticket Book",
-                        style: TextStyle(
-                          color: Colors.white,
-
+                      SizedBox(height: 10),
+                      Text("Need a service today?"),
+                      SizedBox(height: 10),
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: FColors.primarypurple,
+                        ),
+                        child: Text("Ticket Book",
+                          style: TextStyle(
+                            color: Colors.white,
+                
+                          ),
                         ),
                       ),
-                    ),
-                  ]
+                    ]
+                  ),
                 ),
               ),
             ],
@@ -200,15 +198,15 @@ Widget CustomImage(String imagePath) {
 
 Widget _serviceCard(String title, IconData icon) {
   return Card(
-    color: FColors.primaryOrange,
+    //color: FColors.primaryOrange,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     child: Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon, color: Colors.white, size: 30),
+          Icon(icon,  size: 30),
           SizedBox(height: 5),
-          Text(title, style: TextStyle(color: Colors.white, fontSize: 14)),
+          Text(title, style: TextStyle(fontSize: 14)),
         ],
       ),
     ),

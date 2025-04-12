@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:tarvel_mate/pages/bus_info.dart';
 import 'package:tarvel_mate/pages/home.dart';
-import 'package:tarvel_mate/pages/login.dart';
 import 'package:tarvel_mate/pages/map.dart';
 import 'package:tarvel_mate/pages/profile.dart';
 import 'package:tarvel_mate/pages/time_schedule.dart';
 import 'package:tarvel_mate/utils/constants/colors.dart';
+import 'package:tarvel_mate/userdata/userdataprovider.dart';
+import 'package:tarvel_mate/userdata/userprofile.dart';
+import 'package:provider/provider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+// --- Import the pages you want to navigate to ---
+import 'package:tarvel_mate/pages/profile.dart'; // Already importing? Verify path/name
+import 'package:tarvel_mate/pages/feedback.dart'; // Import feedback page// Import about us page (create this)
+import 'package:tarvel_mate/pages/contactus.dart';
+import 'package:icons_plus/icons_plus.dart';
+import 'package:tarvel_mate/theme_provider.dart';
 
-//AppBar Design
-
+// AppBar Design
 class AppbarTop extends StatelessWidget implements PreferredSizeWidget {
   const AppbarTop({super.key});
 
@@ -20,20 +28,21 @@ class AppbarTop extends StatelessWidget implements PreferredSizeWidget {
         "TravelMate",
         style: TextStyle(
           fontFamily: 'DMSans',
-          color: Colors.white,
+          //color: FColors.primarypurple,
           fontSize: 24,
           fontWeight: FontWeight.w600,
         ),
       ),
       centerTitle: true,
-      backgroundColor: FColors.primarypurple,
+      //backgroundColor: FColors.primarypurple,
       actions: [
         IconButton(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
           icon: const Icon(
-            Iconsax.notification_bing_bold,
-            color: Colors.white,
+            Icons.notifications_none_rounded,
+            //color: FColors.primarypurple,
             size: 28,
-            shadows: [Shadow(color: Colors.grey, offset: Offset(1, 1))],
           ),
           onPressed: () {},
         ),
@@ -45,115 +54,248 @@ class AppbarTop extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
-//Drawer Design
-
+// Drawer Design
 class DrawerD extends StatelessWidget {
   const DrawerD({super.key});
 
+  // Helper function to get initials (no changes needed here)
+  String _getInitials(String? username) {
+    if (username == null || username.trim().isEmpty) {
+      return "?";
+    }
+    return username.trim()[0].toUpperCase();
+  }
+
   @override
   Widget build(BuildContext context) {
+    // Get Theme state and provider
+    final themeProvider = Provider.of<ThemeProvider>(
+      context,
+    ); // Get ThemeProvider instance
+    final isDarkMode = themeProvider.isDarkMode; // Use getter from provider
+
+    // Get User data provider
+    final userDataProvider = context.watch<UserDataProvider>();
+    final UserProfile? userProfile = userDataProvider.userProfile;
+
+    // Define colors based on actual theme brightness (optional if using themed widgets)
+    final textColor =
+        Theme.of(context).textTheme.bodyLarge?.color ??
+        (isDarkMode ? Colors.white70 : Colors.black87);
+    final iconColor =
+        Theme.of(context).iconTheme.color ??
+        (isDarkMode ? Colors.white : Colors.black54);
+
     return Drawer(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
-            decoration: BoxDecoration(color: FColors.primarypurple),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  radius: 40,
-                  backgroundImage: AssetImage('assets/profile_image.png'),
+                  radius: 35,
+                  backgroundColor:
+                      Theme.of(context).colorScheme.primaryContainer,
+                  child: Text(
+                    _getInitials(userProfile?.username),
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).colorScheme.onPrimaryContainer,
+                    ),
+                  ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
-                  'Student Name',
+                  userProfile?.username ?? 'User',
                   style: TextStyle(
                     fontFamily: 'DMSans',
-                    color: Colors.white,
-                    fontSize: 24,
+                    color: Theme.of(context).textTheme.bodyLarge?.color,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 18,
                   ),
+                  overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
           ),
-          ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Home'),
-            onTap: () {
-              // Handle the tap
+
+          // --- Drawer Items ---
+          _drawerItem(Iconsax.home_outline, 'Home', iconColor, textColor, () {
+            Navigator.pop(context);
+            Navigator.pushNamed(context, '/nav');
+            // TODO: Navigate home
+          }),
+         
+          _drawerItem(
+            Iconsax.setting_outline,
+            'Settings',
+            iconColor,
+            textColor,
+            () {
+              Navigator.pop(context);
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Settings page not implemented yet.'),
+                ),
+              );
             },
           ),
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Profile'),
-            onTap: () {
-              // Handle the tap
+          _drawerItem(
+            Iconsax.message_question_outline,
+            'Feedback',
+            iconColor,
+            textColor,
+            () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const FeedbackPage()),
+              );
             },
           ),
-          ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
-            onTap: () {
-              // Handle the tap
+          _drawerItem(
+            Iconsax.call_calling_outline,
+            'Contact Us',
+            iconColor,
+            textColor,
+            () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ContactUsSimplePage(),
+                ),
+              );
             },
           ),
-          ListTile(
-            leading: Icon(Icons.notifications),
-            title: Text('Notifications'),
-            onTap: () {
-              // Handle the tap
-            },
+
+          // --- Dark Mode Toggle ---
+          Padding(
+            // Add padding to align visually with ListTile content
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 8.0,
+            ),
+            child: Row(
+              children: [
+                Icon(
+                  // Use the isDarkMode flag from the provider
+                  isDarkMode
+                      ? Iconsax.moon_outline
+                      : Iconsax
+                          .sun_1_outline, // Or regular Icons.dark_mode/light_mode
+                  color: iconColor, // Use defined icon color
+                  size: 24, // Standard ListTile leading icon size
+                ),
+                const SizedBox(
+                  width: 32,
+                ), // Standard spacing after leading icon in ListTile
+                Text(
+                  "Dark Mode",
+                  style: TextStyle(
+                    // Match ListTile text style if possible
+                    // fontFamily: 'DMSans',
+                    color: textColor, // Use defined text color
+                    fontSize:
+                        Theme.of(context).textTheme.titleMedium?.fontSize ?? 16,
+                  ),
+                ),
+                const Spacer(), // Pushes switch to the right
+                Switch(
+                  value: isDarkMode, // Bind value to provider state
+                  onChanged: (value) {
+                    // Call the toggle method on the provider instance
+                    // No need for context.read here as Provider.of was used above
+                    themeProvider.toggleTheme(value);
+                  },
+                  activeColor:
+                      Theme.of(context).colorScheme.primary, // Use theme color
+                  // You might want to style inactive color too
+                  // inactiveTrackColor: Colors.grey[300],
+                  // inactiveThumbColor: Colors.grey[500],
+                ),
+              ],
+            ),
           ),
-          ListTile(
-            leading: Icon(Icons.help),
-            title: Text('Help'),
-            onTap: () {
-              // Handle the tap
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.info),
-            title: Text('About'),
-            onTap: () {
-              // Handle the tap
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.contact_mail),
-            title: Text('Contact Us'),
-            onTap: () {
-              // Handle the tap
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.feedback),
-            title: Text('Feedback'),
-            onTap: () {
-              // Handle the tap
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.share),
-            title: Text('Share'),
-            onTap: () {
-              // Handle the tap
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.exit_to_app),
-            title: Text('Logout'),
-            onTap: () {
-              Navigator.pushNamed(context, '/login');
+
+          // ----------------------
+          const Divider(), // Separator before logout
+          // --- Logout Item ---
+          _drawerItem(
+            Iconsax.logout_outline,
+            'Logout',
+            iconColor,
+            textColor,
+            () async {
+              // ... (logout logic remains the same) ...
+              Navigator.pop(context); // Close drawer first
+              bool? confirmLogout = await showDialog<bool>(
+                context: context, // Provide the BuildContext
+                barrierDismissible:
+                    false, // Optional: Prevents closing by tapping outside
+                builder: (BuildContext dialogContext) {
+                  // The builder function creates the dialog
+                  return AlertDialog(
+                    title: const Text('Confirm Logout'),
+                    content: const Text('Are you sure you want to log out?'),
+                    actions: <Widget>[
+                      TextButton(
+                        child: const Text('Cancel'),
+                        onPressed: () {
+                          // Close the dialog and return 'false'
+                          Navigator.of(dialogContext).pop(false);
+                        },
+                      ),
+                      TextButton(
+                        child: const Text('Logout'),
+                        onPressed: () {
+                          // Close the dialog and return 'true'
+                          Navigator.of(dialogContext).pop(true);
+                        },
+                      ),
+                    ],
+                  );
+                }, // End of builder function
+              );
+              if (confirmLogout == true && context.mounted) {
+                try {
+                  context.read<UserDataProvider>().clearUserData();
+                  await FirebaseAuth.instance.signOut();
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    '/login',
+                    (route) => false,
+                  );
+                } catch (e) {
+                  /* ... error handling ... */
+                }
+              }
             },
           ),
         ],
       ),
     );
   }
-}
 
-//BottomNavigationBar
+  // Helper method for drawer items (no changes needed here)
+  ListTile _drawerItem(
+    IconData icon,
+    String title,
+    Color iconColor,
+    Color textColor,
+    VoidCallback onTap,
+  ) {
+    return ListTile(
+      leading: Icon(icon, color: iconColor, size: 24), // Match icon size
+      title: Text(title, style: TextStyle(color: textColor)),
+      onTap: onTap,
+    );
+  }
+}
 
 class NavBottom extends StatefulWidget {
   const NavBottom({super.key});
@@ -169,76 +311,65 @@ class _NavBottomState extends State<NavBottom> {
     Home(),
     TimeSchedule(),
     MapLoca(),
-    Login(),
-    StuProfile(),
+    BusInfo(),
+    ProfilePage(),
   ];
 
-  // Method to handle bottom navigation bar item tap
   void _onItemTapped(int index) {
     setState(() {
       selectedIndex = index;
     });
-
-    // Navigate to the selected page
-    // switch (index) {
-    //   case 0:
-    //     Navigator.pushNamed(context, '/home');
-    //     break;
-    //   case 1:
-    //     Navigator.pushNamed(context, '/signup');
-    //     break;
-    //   case 2:
-    //     Navigator.pushNamed(context, '/login');
-    //     break;
-    //   case 3:
-    //     Navigator.pushNamed(context, '/map');
-    //     break;
-    //   case 4:
-    //     Navigator.pushNamed(context, '/home');
-    //     break;
-    // }
   }
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
+      appBar: AppbarTop(),
+      drawer: DrawerD(),
       body: IndexedStack(index: selectedIndex, children: widgetOptions),
 
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: FColors.darkGrey,
-        currentIndex: selectedIndex,
-        onTap: _onItemTapped, // Method to update the selected item
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
-        elevation: 5,
-
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: 'Home'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.access_time_outlined),
-            label: 'Schedule',
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.location_on_outlined), label: 'Location'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.directions_bus_outlined),
-            label: 'Bus',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_2_outlined),
-            label: 'Profile',
-          ),
-        ],
+      // Wrap BottomNavigationBar in a Theme to disable only click (ripple) effect
+      bottomNavigationBar: Theme(
+        data: Theme.of(context).copyWith(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+        ),
+        child: BottomNavigationBar(
+          backgroundColor: isDark ? Colors.grey[900] : FColors.darkGrey,
+          currentIndex: selectedIndex,
+          onTap: _onItemTapped,
+          selectedItemColor: Colors.blue,
+          unselectedItemColor: Colors.grey,
+          elevation: 5,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.access_time_outlined),
+              label: 'Schedule',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.location_on_outlined),
+              label: 'Location',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.directions_bus_outlined),
+              label: 'Bus',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person_outline),
+              label: 'Profile',
+            ),
+          ],
+        ),
       ),
     );
   }
 }
 
-//ObjectBox  For Time Schedule
+// ObjectBox Schedule Model
 
-class Schedule {
-  String? busname;
-  String? from;
-  String? to;
-  String? time;
-  Schedule({this.busname, this.from, this.to, this.time});
-}

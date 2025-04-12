@@ -1,5 +1,8 @@
 plugins {
     id("com.android.application")
+    // START: FlutterFire Configuration
+    id("com.google.gms.google-services")
+    // END: FlutterFire Configuration
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
@@ -22,7 +25,7 @@ android {
     defaultConfig {
         applicationId = "com.example.tarvel_mate"
           // Use integer values for SDK versions
-        minSdk = 21  // or the required minimum SDK version (e.g., 19, 21, 23)
+        minSdk = 23  // or the required minimum SDK version (e.g., 19, 21, 23)
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName

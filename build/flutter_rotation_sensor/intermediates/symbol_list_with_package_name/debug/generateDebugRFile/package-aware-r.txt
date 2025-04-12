@@ -1,0 +1,1 @@
+net.tlserver6y.flutter_rotation_sensor

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "332241203140",
+    "project_id": "diutravelmate-cd9d9",
+    "storage_bucket": "diutravelmate-cd9d9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332241203140:android:194a354a614fc92a31fe91",
+        "android_client_info": {
+          "package_name": "com.example.tarvel_mate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHSMWSWuryQ8lok3leN5kYHkl5m1HcpMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
