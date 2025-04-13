@@ -80,11 +80,11 @@
    ```
 3. Install dependencies:
    ```sh
-   npm install  # or yarn install
+   flutter pub update
    ```
 4. Start the application:
    ```sh
-   npm start  # or yarn start
+   flutter run
    ```
 
 ---
