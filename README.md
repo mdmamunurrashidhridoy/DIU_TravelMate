@@ -33,6 +33,27 @@
 
 ---
 
+## 📸 Looks of our App
+<table>
+  <tr>
+    <td><img src="images_for_readme/Screenshot_20250414-173733.png" alt="Screen 1-State 1" width="300" /></td>
+    <td><img src="images_for_readme/Screenshot_20250414-173739.png" alt="Screen 3" width="300" /></td>
+    <td><img src="images_for_readme/Screenshot_20250414-173743.png" alt="Screen 4" width="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="images_for_readme/Screenshot_20250414-173810.png" alt="Screen 2" width="300" /></td>
+    <td><img src="images_for_readme/Screenshot_20250414-173814.png" alt="Screen 1-State 2" width="300" /></td>
+    <td><img src="images_for_readme/Screenshot_20250414-173824.png" alt="Screen 5" width="300" /></td>
+  </tr>
+</table>
+
+
+
+
+---
+
+
+
 ## 🎯 Competitive Edge
 - **User-Friendly Interface**: Intuitive design tailored for students and staff.
 - **AI-Optimized Routes**: Smarter scheduling for efficient transport.
@@ -50,25 +71,12 @@
 
 ---
 
-## 📸 Screenshots
-<table>
-  <tr>
-    <td><img src="images_for_readme/4.1-Screen 1-State 1.png" alt="Screen 1-State 1" width="300" /></td>
-    <td><img src="images_for_readme/2.1-Screen 3.png" alt="Screen 3" width="300" /></td>
-    <td><img src="images_for_readme/3.1-Screen 4.png" alt="Screen 4" width="300" /></td>
-  </tr>
-  <tr>
-    <td><img src="images_for_readme/1.1-Screen 2.png" alt="Screen 2" width="300" /></td>
-    <td><img src="images_for_readme/4.2-Screen 1-State 2.png" alt="Screen 1-State 2" width="300" /></td>
-    <td><img src="images_for_readme/5.1-Screen 5.png" alt="Screen 5" width="300" /></td>
-  </tr>
-</table>
+## 📦 Download the App
+
+[⬇️ Download APK](build/app/outputs/flutter-apk/app-release.apk)
 
 
-
----
-
-## 📌 Installation Guide
+## 📌 Build Guide
 
 1. Clone the repository:
    ```sh
@@ -88,18 +96,14 @@
    ```
 
 ---
+## Documentaion
+📄 [View PDF](https://drive.google.com/file/d/1fnBlvlYVlCng2TISymz8sSnuE4lZXsPD/view?usp=sharing)
+
+---
 
 ## 👥 Team
 <img src="images_for_readme/Team-.png" />
 
-### Lead Developer & Engineer-
-
-#### MD Moshiur Rahman  
-[![GitHub](https://img.shields.io/badge/GitHub-moshiurr4766-blue?logo=github)](https://github.com/moshiurr4766)  
-
-MD Moshiur Rahman is a skilled software engineer with expertise in scalable system design, backend development, and modern frameworks. He has strong proficiency in **Flutter**, enabling the development of high-performance cross-platform applications. With a passion for innovation, he plays a crucial role in driving our projects forward.  
-
-Explore his work on [GitHub](https://github.com/moshiurr4766)!  
 
 
 ---

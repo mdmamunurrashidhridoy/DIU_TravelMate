@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/animator/fragment_fade_exit.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-fragment-1.7.1-9:/animator/fragment_fade_exit.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/animator/fragment_open_enter.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-fragment-1.7.1-9:/animator/fragment_open_enter.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/animator/fragment_open_exit.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-fragment-1.7.1-9:/animator/fragment_open_exit.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/animator/fragment_fade_enter.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-fragment-1.7.1-9:/animator/fragment_fade_enter.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/animator/fragment_close_enter.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-fragment-1.7.1-9:/animator/fragment_close_enter.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/animator/fragment_close_exit.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-fragment-1.7.1-9:/animator/fragment_close_exit.xml"
+    }
+]

@@ -1,0 +1,458 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.tarvel_mate"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="35" />
+10    <!--
+11         Required to query activities that can process text, see:
+12         https://developer.android.com/training/package-visibility and
+13         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+14
+15         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+16    -->
+17    <queries>
+17-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:42:5-47:15
+18        <intent>
+18-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:43:9-46:18
+19            <action android:name="android.intent.action.PROCESS_TEXT" />
+19-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:44:13-72
+19-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:44:21-70
+20
+21            <data android:mimeType="text/plain" />
+21-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:45:13-50
+21-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:45:19-48
+22        </intent>
+23        <!-- Needs to be explicitly declared on Android R+ -->
+24        <package android:name="com.google.android.apps.maps" />
+24-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
+24-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
+25    </queries>
+26
+27    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+27-->[:location] /home/hridoy/Projects/DIU_TravelMate/build/location/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:7:5-81
+27-->[:location] /home/hridoy/Projects/DIU_TravelMate/build/location/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:7:22-78
+28    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Include required permissions for Google Maps API to run. -->
+28-->[:location] /home/hridoy/Projects/DIU_TravelMate/build/location/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:8:5-79
+28-->[:location] /home/hridoy/Projects/DIU_TravelMate/build/location/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:8:22-76
+29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+29-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
+29-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:23:22-76
+30    <uses-permission android:name="android.permission.INTERNET" />
+30-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:24:5-67
+30-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:24:22-64
+31
+32    <uses-feature
+32-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
+33        android:glEsVersion="0x00020000"
+33-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
+34        android:required="true" />
+34-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
+35
+36    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+36-->[com.google.android.recaptcha:recaptcha:18.6.1] /home/hridoy/.gradle/caches/8.10.2/transforms/63c8215b4ef0ce806491a9ae657bddeb/transformed/jetified-recaptcha-18.6.1/AndroidManifest.xml:9:5-98
+36-->[com.google.android.recaptcha:recaptcha:18.6.1] /home/hridoy/.gradle/caches/8.10.2/transforms/63c8215b4ef0ce806491a9ae657bddeb/transformed/jetified-recaptcha-18.6.1/AndroidManifest.xml:9:22-95
+37
+38    <permission
+38-->[androidx.core:core:1.13.1] /home/hridoy/.gradle/caches/8.10.2/transforms/7f46bbd13206153774356ca6103aa890/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+39        android:name="com.example.tarvel_mate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+39-->[androidx.core:core:1.13.1] /home/hridoy/.gradle/caches/8.10.2/transforms/7f46bbd13206153774356ca6103aa890/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+40        android:protectionLevel="signature" />
+40-->[androidx.core:core:1.13.1] /home/hridoy/.gradle/caches/8.10.2/transforms/7f46bbd13206153774356ca6103aa890/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+41
+42    <uses-permission android:name="com.example.tarvel_mate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+42-->[androidx.core:core:1.13.1] /home/hridoy/.gradle/caches/8.10.2/transforms/7f46bbd13206153774356ca6103aa890/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+42-->[androidx.core:core:1.13.1] /home/hridoy/.gradle/caches/8.10.2/transforms/7f46bbd13206153774356ca6103aa890/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+43
+44    <application
+45        android:name="android.app.Application"
+45-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:4:9-42
+46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+46-->[androidx.core:core:1.13.1] /home/hridoy/.gradle/caches/8.10.2/transforms/7f46bbd13206153774356ca6103aa890/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+47        android:extractNativeLibs="false"
+48        android:icon="@mipmap/ic_launcher"
+48-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:5:9-43
+49        android:label="tarvel_mate" >
+49-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:3:9-36
+50        <activity
+50-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:6:9-27:20
+51            android:name="com.example.tarvel_mate.MainActivity"
+51-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:7:13-41
+52            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+52-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:12:13-163
+53            android:exported="true"
+53-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:8:13-36
+54            android:hardwareAccelerated="true"
+54-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:13:13-47
+55            android:launchMode="singleTop"
+55-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:9:13-43
+56            android:taskAffinity=""
+56-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:10:13-36
+57            android:theme="@style/LaunchTheme"
+57-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:11:13-47
+58            android:windowSoftInputMode="adjustResize" >
+58-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:14:13-55
+59
+60            <!--
+61                 Specifies an Android theme to apply to this Activity as soon as
+62                 the Android process has started. This theme is visible to the user
+63                 while the Flutter UI initializes. After that, this theme continues
+64                 to determine the Window background behind the Flutter UI.
+65            -->
+66            <meta-data
+66-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:19:13-22:17
+67                android:name="io.flutter.embedding.android.NormalTheme"
+67-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:20:15-70
+68                android:resource="@style/NormalTheme" />
+68-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:21:15-52
+69
+70            <intent-filter>
+70-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:23:13-26:29
+71                <action android:name="android.intent.action.MAIN" />
+71-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:24:17-68
+71-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:24:25-66
+72
+73                <category android:name="android.intent.category.LAUNCHER" />
+73-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:25:17-76
+73-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:25:27-74
+74            </intent-filter>
+75        </activity>
+76        <!--
+77             Don't delete the meta-data below.
+78             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+79        -->
+80        <meta-data
+80-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:30:9-32:33
+81            android:name="flutterEmbedding"
+81-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:31:13-44
+82            android:value="2" />
+82-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:32:13-30
+83        <meta-data
+83-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:34:9-35:73
+84            android:name="com.google.android.geo.API_KEY"
+84-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:34:20-65
+85            android:value="AIzaSyDkL97pRmF-wXpbd7qjTvvBE2XagjwsR4Y" />
+85-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:35:16-71
+86
+87        <service
+87-->[:location] /home/hridoy/Projects/DIU_TravelMate/build/location/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:11:9-15:56
+88            android:name="com.lyokone.location.FlutterLocationService"
+88-->[:location] /home/hridoy/Projects/DIU_TravelMate/build/location/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:12:13-71
+89            android:enabled="true"
+89-->[:location] /home/hridoy/Projects/DIU_TravelMate/build/location/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:13:13-35
+90            android:exported="false"
+90-->[:location] /home/hridoy/Projects/DIU_TravelMate/build/location/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:14:13-37
+91            android:foregroundServiceType="location" />
+91-->[:location] /home/hridoy/Projects/DIU_TravelMate/build/location/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:15:13-53
+92        <service
+92-->[:geolocator_android] /home/hridoy/Projects/DIU_TravelMate/build/geolocator_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:8:9-12:56
+93            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+93-->[:geolocator_android] /home/hridoy/Projects/DIU_TravelMate/build/geolocator_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:9:13-77
+94            android:enabled="true"
+94-->[:geolocator_android] /home/hridoy/Projects/DIU_TravelMate/build/geolocator_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:10:13-35
+95            android:exported="false"
+95-->[:geolocator_android] /home/hridoy/Projects/DIU_TravelMate/build/geolocator_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:11:13-37
+96            android:foregroundServiceType="location" />
+96-->[:geolocator_android] /home/hridoy/Projects/DIU_TravelMate/build/geolocator_android/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:12:13-53
+97        <service
+97-->[:cloud_firestore] /home/hridoy/Projects/DIU_TravelMate/build/cloud_firestore/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:8:9-12:19
+98            android:name="com.google.firebase.components.ComponentDiscoveryService"
+98-->[:cloud_firestore] /home/hridoy/Projects/DIU_TravelMate/build/cloud_firestore/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:8:18-89
+99            android:directBootAware="true"
+99-->[com.google.firebase:firebase-common:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/ec4138de37aaf41c537b7e74e719439c/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+100            android:exported="false" >
+100-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:68:13-37
+101            <meta-data
+101-->[:cloud_firestore] /home/hridoy/Projects/DIU_TravelMate/build/cloud_firestore/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:9:13-11:85
+102                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+102-->[:cloud_firestore] /home/hridoy/Projects/DIU_TravelMate/build/cloud_firestore/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:10:17-134
+103                android:value="com.google.firebase.components.ComponentRegistrar" />
+103-->[:cloud_firestore] /home/hridoy/Projects/DIU_TravelMate/build/cloud_firestore/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:11:17-82
+104            <meta-data
+104-->[:firebase_auth] /home/hridoy/Projects/DIU_TravelMate/build/firebase_auth/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:9:13-11:85
+105                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+105-->[:firebase_auth] /home/hridoy/Projects/DIU_TravelMate/build/firebase_auth/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:10:17-124
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->[:firebase_auth] /home/hridoy/Projects/DIU_TravelMate/build/firebase_auth/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:11:17-82
+107            <meta-data
+107-->[:firebase_core] /home/hridoy/Projects/DIU_TravelMate/build/firebase_core/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:9:13-11:85
+108                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+108-->[:firebase_core] /home/hridoy/Projects/DIU_TravelMate/build/firebase_core/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:10:17-124
+109                android:value="com.google.firebase.components.ComponentRegistrar" />
+109-->[:firebase_core] /home/hridoy/Projects/DIU_TravelMate/build/firebase_core/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:11:17-82
+110            <meta-data
+110-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:69:13-71:85
+111                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+111-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:70:17-109
+112                android:value="com.google.firebase.components.ComponentRegistrar" />
+112-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:71:17-82
+113            <meta-data
+113-->[com.google.firebase:firebase-firestore:25.1.3] /home/hridoy/.gradle/caches/8.10.2/transforms/bb728f7ea1255e726259cb05934732da/transformed/jetified-firebase-firestore-25.1.3/AndroidManifest.xml:17:13-19:85
+114                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+114-->[com.google.firebase:firebase-firestore:25.1.3] /home/hridoy/.gradle/caches/8.10.2/transforms/bb728f7ea1255e726259cb05934732da/transformed/jetified-firebase-firestore-25.1.3/AndroidManifest.xml:18:17-122
+115                android:value="com.google.firebase.components.ComponentRegistrar" />
+115-->[com.google.firebase:firebase-firestore:25.1.3] /home/hridoy/.gradle/caches/8.10.2/transforms/bb728f7ea1255e726259cb05934732da/transformed/jetified-firebase-firestore-25.1.3/AndroidManifest.xml:19:17-82
+116            <meta-data
+116-->[com.google.firebase:firebase-firestore:25.1.3] /home/hridoy/.gradle/caches/8.10.2/transforms/bb728f7ea1255e726259cb05934732da/transformed/jetified-firebase-firestore-25.1.3/AndroidManifest.xml:20:13-22:85
+117                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+117-->[com.google.firebase:firebase-firestore:25.1.3] /home/hridoy/.gradle/caches/8.10.2/transforms/bb728f7ea1255e726259cb05934732da/transformed/jetified-firebase-firestore-25.1.3/AndroidManifest.xml:21:17-111
+118                android:value="com.google.firebase.components.ComponentRegistrar" />
+118-->[com.google.firebase:firebase-firestore:25.1.3] /home/hridoy/.gradle/caches/8.10.2/transforms/bb728f7ea1255e726259cb05934732da/transformed/jetified-firebase-firestore-25.1.3/AndroidManifest.xml:22:17-82
+119            <meta-data
+119-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/bcc8d2985ec1ab09d1e21c43fe50ab02/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+120                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+120-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/bcc8d2985ec1ab09d1e21c43fe50ab02/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+121                android:value="com.google.firebase.components.ComponentRegistrar" />
+121-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/bcc8d2985ec1ab09d1e21c43fe50ab02/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+122            <meta-data
+122-->[com.google.firebase:firebase-common:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/ec4138de37aaf41c537b7e74e719439c/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+123                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+123-->[com.google.firebase:firebase-common:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/ec4138de37aaf41c537b7e74e719439c/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+124                android:value="com.google.firebase.components.ComponentRegistrar" />
+124-->[com.google.firebase:firebase-common:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/ec4138de37aaf41c537b7e74e719439c/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+125        </service> <!-- Needs to be explicitly declared on P+ -->
+126        <uses-library
+126-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
+127            android:name="org.apache.http.legacy"
+127-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
+128            android:required="false" />
+128-->[com.google.android.gms:play-services-maps:18.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/b9c01572a1c0fb30052b74754d7f0455/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+129
+130        <activity
+130-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:29:9-46:20
+131            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+131-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:30:13-80
+132            android:excludeFromRecents="true"
+132-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:31:13-46
+133            android:exported="true"
+133-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:32:13-36
+134            android:launchMode="singleTask"
+134-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:33:13-44
+135            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+135-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:34:13-72
+136            <intent-filter>
+136-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:35:13-45:29
+137                <action android:name="android.intent.action.VIEW" />
+137-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:36:17-69
+137-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:36:25-66
+138
+139                <category android:name="android.intent.category.DEFAULT" />
+139-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:38:17-76
+139-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:38:27-73
+140                <category android:name="android.intent.category.BROWSABLE" />
+140-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:39:17-78
+140-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:39:27-75
+141
+142                <data
+142-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:45:13-50
+143                    android:host="firebase.auth"
+144                    android:path="/"
+145                    android:scheme="genericidp" />
+146            </intent-filter>
+147        </activity>
+148        <activity
+148-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:47:9-64:20
+149            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+149-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:48:13-79
+150            android:excludeFromRecents="true"
+150-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:49:13-46
+151            android:exported="true"
+151-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:50:13-36
+152            android:launchMode="singleTask"
+152-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:51:13-44
+153            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+153-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:52:13-72
+154            <intent-filter>
+154-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:53:13-63:29
+155                <action android:name="android.intent.action.VIEW" />
+155-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:36:17-69
+155-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:36:25-66
+156
+157                <category android:name="android.intent.category.DEFAULT" />
+157-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:38:17-76
+157-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:38:27-73
+158                <category android:name="android.intent.category.BROWSABLE" />
+158-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:39:17-78
+158-->[com.google.firebase:firebase-auth:23.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/633413bad6a67ccffb521b72ab86b298/transformed/jetified-firebase-auth-23.2.0/AndroidManifest.xml:39:27-75
+159
+160                <data
+160-->/home/hridoy/Projects/DIU_TravelMate/android/app/src/main/AndroidManifest.xml:45:13-50
+161                    android:host="firebase.auth"
+162                    android:path="/"
+163                    android:scheme="recaptcha" />
+164            </intent-filter>
+165        </activity>
+166
+167        <service
+167-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:24:9-32:19
+168            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+168-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:25:13-94
+169            android:enabled="true"
+169-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:26:13-35
+170            android:exported="false" >
+170-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:27:13-37
+171            <meta-data
+171-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:29:13-31:104
+172                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+172-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:30:17-76
+173                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+173-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:31:17-101
+174        </service>
+175
+176        <activity
+176-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:34:9-41:20
+177            android:name="androidx.credentials.playservices.HiddenActivity"
+177-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:35:13-76
+178            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+178-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:36:13-87
+179            android:enabled="true"
+179-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:37:13-35
+180            android:exported="false"
+180-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:38:13-37
+181            android:fitsSystemWindows="true"
+181-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:39:13-45
+182            android:theme="@style/Theme.Hidden" >
+182-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /home/hridoy/.gradle/caches/8.10.2/transforms/a159499e04f9d5848eb9c527e821c718/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:40:13-48
+183        </activity>
+184        <activity
+184-->[com.google.android.gms:play-services-auth:20.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/7f3cbd85e9776d1033d598bbdc03a650/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
+185            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+185-->[com.google.android.gms:play-services-auth:20.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/7f3cbd85e9776d1033d598bbdc03a650/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
+186            android:excludeFromRecents="true"
+186-->[com.google.android.gms:play-services-auth:20.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/7f3cbd85e9776d1033d598bbdc03a650/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
+187            android:exported="false"
+187-->[com.google.android.gms:play-services-auth:20.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/7f3cbd85e9776d1033d598bbdc03a650/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
+188            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+188-->[com.google.android.gms:play-services-auth:20.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/7f3cbd85e9776d1033d598bbdc03a650/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
+189        <!--
+190            Service handling Google Sign-In user revocation. For apps that do not integrate with
+191            Google Sign-In, this service will never be started.
+192        -->
+193        <service
+193-->[com.google.android.gms:play-services-auth:20.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/7f3cbd85e9776d1033d598bbdc03a650/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
+194            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+194-->[com.google.android.gms:play-services-auth:20.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/7f3cbd85e9776d1033d598bbdc03a650/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
+195            android:exported="true"
+195-->[com.google.android.gms:play-services-auth:20.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/7f3cbd85e9776d1033d598bbdc03a650/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
+196            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+196-->[com.google.android.gms:play-services-auth:20.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/7f3cbd85e9776d1033d598bbdc03a650/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
+197            android:visibleToInstantApps="true" />
+197-->[com.google.android.gms:play-services-auth:20.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/7f3cbd85e9776d1033d598bbdc03a650/transformed/jetified-play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
+198
+199        <activity
+199-->[com.google.android.gms:play-services-base:18.5.0] /home/hridoy/.gradle/caches/8.10.2/transforms/07660f349a2fe95c07a6bc7026689012/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:9-173
+200            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+200-->[com.google.android.gms:play-services-base:18.5.0] /home/hridoy/.gradle/caches/8.10.2/transforms/07660f349a2fe95c07a6bc7026689012/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:19-85
+201            android:exported="false"
+201-->[com.google.android.gms:play-services-base:18.5.0] /home/hridoy/.gradle/caches/8.10.2/transforms/07660f349a2fe95c07a6bc7026689012/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:146-170
+202            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+202-->[com.google.android.gms:play-services-base:18.5.0] /home/hridoy/.gradle/caches/8.10.2/transforms/07660f349a2fe95c07a6bc7026689012/transformed/jetified-play-services-base-18.5.0/AndroidManifest.xml:5:86-145
+203
+204        <provider
+204-->[com.google.firebase:firebase-common:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/ec4138de37aaf41c537b7e74e719439c/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+205            android:name="com.google.firebase.provider.FirebaseInitProvider"
+205-->[com.google.firebase:firebase-common:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/ec4138de37aaf41c537b7e74e719439c/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+206            android:authorities="com.example.tarvel_mate.firebaseinitprovider"
+206-->[com.google.firebase:firebase-common:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/ec4138de37aaf41c537b7e74e719439c/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+207            android:directBootAware="true"
+207-->[com.google.firebase:firebase-common:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/ec4138de37aaf41c537b7e74e719439c/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+208            android:exported="false"
+208-->[com.google.firebase:firebase-common:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/ec4138de37aaf41c537b7e74e719439c/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+209            android:initOrder="100" />
+209-->[com.google.firebase:firebase-common:21.0.0] /home/hridoy/.gradle/caches/8.10.2/transforms/ec4138de37aaf41c537b7e74e719439c/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+210
+211        <uses-library
+211-->[androidx.window:window:1.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/73db24a2829d8fb9cf5663cfbb96cfeb/transformed/jetified-window-1.2.0/AndroidManifest.xml:23:9-25:40
+212            android:name="androidx.window.extensions"
+212-->[androidx.window:window:1.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/73db24a2829d8fb9cf5663cfbb96cfeb/transformed/jetified-window-1.2.0/AndroidManifest.xml:24:13-54
+213            android:required="false" />
+213-->[androidx.window:window:1.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/73db24a2829d8fb9cf5663cfbb96cfeb/transformed/jetified-window-1.2.0/AndroidManifest.xml:25:13-37
+214        <uses-library
+214-->[androidx.window:window:1.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/73db24a2829d8fb9cf5663cfbb96cfeb/transformed/jetified-window-1.2.0/AndroidManifest.xml:26:9-28:40
+215            android:name="androidx.window.sidecar"
+215-->[androidx.window:window:1.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/73db24a2829d8fb9cf5663cfbb96cfeb/transformed/jetified-window-1.2.0/AndroidManifest.xml:27:13-51
+216            android:required="false" />
+216-->[androidx.window:window:1.2.0] /home/hridoy/.gradle/caches/8.10.2/transforms/73db24a2829d8fb9cf5663cfbb96cfeb/transformed/jetified-window-1.2.0/AndroidManifest.xml:28:13-37
+217
+218        <meta-data
+218-->[com.google.android.gms:play-services-basement:18.4.0] /home/hridoy/.gradle/caches/8.10.2/transforms/cf636ef2f0738047fe8129f320ef339e/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+219            android:name="com.google.android.gms.version"
+219-->[com.google.android.gms:play-services-basement:18.4.0] /home/hridoy/.gradle/caches/8.10.2/transforms/cf636ef2f0738047fe8129f320ef339e/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+220            android:value="@integer/google_play_services_version" />
+220-->[com.google.android.gms:play-services-basement:18.4.0] /home/hridoy/.gradle/caches/8.10.2/transforms/cf636ef2f0738047fe8129f320ef339e/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+221
+222        <provider
+222-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/0095a4dba85ef3c38f0a9652b34cd9be/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+223            android:name="androidx.startup.InitializationProvider"
+223-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/0095a4dba85ef3c38f0a9652b34cd9be/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:25:13-67
+224            android:authorities="com.example.tarvel_mate.androidx-startup"
+224-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/0095a4dba85ef3c38f0a9652b34cd9be/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:26:13-68
+225            android:exported="false" >
+225-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/0095a4dba85ef3c38f0a9652b34cd9be/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:27:13-37
+226            <meta-data
+226-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/0095a4dba85ef3c38f0a9652b34cd9be/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+227                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+227-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/0095a4dba85ef3c38f0a9652b34cd9be/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+228                android:value="androidx.startup" />
+228-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/hridoy/.gradle/caches/8.10.2/transforms/0095a4dba85ef3c38f0a9652b34cd9be/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+229            <meta-data
+229-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+230                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+230-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+231                android:value="androidx.startup" />
+231-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+232        </provider>
+233
+234        <receiver
+234-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+235            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+235-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+236            android:directBootAware="false"
+236-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+237            android:enabled="true"
+237-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+238            android:exported="true"
+238-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+239            android:permission="android.permission.DUMP" >
+239-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+240            <intent-filter>
+240-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+241                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+241-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+241-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+242            </intent-filter>
+243            <intent-filter>
+243-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+244                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+244-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+244-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+245            </intent-filter>
+246            <intent-filter>
+246-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+247                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+247-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+247-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+248            </intent-filter>
+249            <intent-filter>
+249-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+250                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+250-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+250-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/hridoy/.gradle/caches/8.10.2/transforms/71c2a5c462ada5f663b8ca591b1907a5/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+251            </intent-filter>
+252        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
+253        <activity
+253-->[com.google.android.play:core-common:2.0.3] /home/hridoy/.gradle/caches/8.10.2/transforms/dc78addb618cc9a88505262f8a23e42d/transformed/jetified-core-common-2.0.3/AndroidManifest.xml:14:9-18:65
+254            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+254-->[com.google.android.play:core-common:2.0.3] /home/hridoy/.gradle/caches/8.10.2/transforms/dc78addb618cc9a88505262f8a23e42d/transformed/jetified-core-common-2.0.3/AndroidManifest.xml:15:13-93
+255            android:exported="false"
+255-->[com.google.android.play:core-common:2.0.3] /home/hridoy/.gradle/caches/8.10.2/transforms/dc78addb618cc9a88505262f8a23e42d/transformed/jetified-core-common-2.0.3/AndroidManifest.xml:16:13-37
+256            android:stateNotNeeded="true"
+256-->[com.google.android.play:core-common:2.0.3] /home/hridoy/.gradle/caches/8.10.2/transforms/dc78addb618cc9a88505262f8a23e42d/transformed/jetified-core-common-2.0.3/AndroidManifest.xml:17:13-42
+257            android:theme="@style/Theme.PlayCore.Transparent" />
+257-->[com.google.android.play:core-common:2.0.3] /home/hridoy/.gradle/caches/8.10.2/transforms/dc78addb618cc9a88505262f8a23e42d/transformed/jetified-core-common-2.0.3/AndroidManifest.xml:18:13-62
+258    </application>
+259
+260</manifest>

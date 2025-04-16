@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.baseflow.geolocator.geolocator_android-release-27:/color/common_google_signin_btn_text_light.xml",
+        "source": "com.baseflow.geolocator.geolocator_android-jetified-play-services-base-18.3.0-9:/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "com.baseflow.geolocator.geolocator_android-release-27:/color/common_google_signin_btn_text_dark.xml",
+        "source": "com.baseflow.geolocator.geolocator_android-jetified-play-services-base-18.3.0-9:/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "com.baseflow.geolocator.geolocator_android-release-27:/color/common_google_signin_btn_tint.xml",
+        "source": "com.baseflow.geolocator.geolocator_android-jetified-play-services-base-18.3.0-9:/color/common_google_signin_btn_tint.xml"
+    }
+]

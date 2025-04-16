@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/home/hridoy/.pub-cache/hosted/pub.dev/flutter_rotation_sensor-0.1.1/android"
+    name=":flutter_rotation_sensor"
+    type="LIBRARY"
+    maven="net.tlserver6y.flutter_rotation_sensor:flutter_rotation_sensor:1.0-SNAPSHOT"
+    agpVersion="8.7.0"
+    buildFolder="/home/hridoy/Projects/DIU_TravelMate/build/flutter_rotation_sensor"
+    bootClassPath="/home/hridoy/Android/Sdk/platforms/android-34/android.jar:/home/hridoy/Android/Sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

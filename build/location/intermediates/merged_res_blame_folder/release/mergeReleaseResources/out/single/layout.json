@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.lyokone.location-release-27:/layout/notification_template_part_chronometer.xml",
+        "source": "com.lyokone.location-core-1.13.1-15:/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "com.lyokone.location-release-27:/layout/notification_template_part_time.xml",
+        "source": "com.lyokone.location-core-1.13.1-15:/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "com.lyokone.location-release-27:/layout/ime_secondary_split_test_activity.xml",
+        "source": "com.lyokone.location-core-1.13.1-15:/layout/ime_secondary_split_test_activity.xml"
+    },
+    {
+        "merged": "com.lyokone.location-release-27:/layout/custom_dialog.xml",
+        "source": "com.lyokone.location-core-1.13.1-15:/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "com.lyokone.location-release-27:/layout/ime_base_split_test_activity.xml",
+        "source": "com.lyokone.location-core-1.13.1-15:/layout/ime_base_split_test_activity.xml"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.github.rmtmckenzie.native_device_orientation-release-25:/layout/notification_action.xml",
+        "source": "com.github.rmtmckenzie.native_device_orientation-core-1.13.1-14:/layout/notification_action.xml"
+    },
+    {
+        "merged": "com.github.rmtmckenzie.native_device_orientation-release-25:/layout/notification_template_part_time.xml",
+        "source": "com.github.rmtmckenzie.native_device_orientation-core-1.13.1-14:/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "com.github.rmtmckenzie.native_device_orientation-release-25:/layout/ime_base_split_test_activity.xml",
+        "source": "com.github.rmtmckenzie.native_device_orientation-core-1.13.1-14:/layout/ime_base_split_test_activity.xml"
+    },
+    {
+        "merged": "com.github.rmtmckenzie.native_device_orientation-release-25:/layout/notification_template_part_chronometer.xml",
+        "source": "com.github.rmtmckenzie.native_device_orientation-core-1.13.1-14:/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "com.github.rmtmckenzie.native_device_orientation-release-25:/layout/notification_template_custom_big.xml",
+        "source": "com.github.rmtmckenzie.native_device_orientation-core-1.13.1-14:/layout/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "com.github.rmtmckenzie.native_device_orientation-release-25:/layout/ime_secondary_split_test_activity.xml",
+        "source": "com.github.rmtmckenzie.native_device_orientation-core-1.13.1-14:/layout/ime_secondary_split_test_activity.xml"
+    },
+    {
+        "merged": "com.github.rmtmckenzie.native_device_orientation-release-25:/layout/custom_dialog.xml",
+        "source": "com.github.rmtmckenzie.native_device_orientation-core-1.13.1-14:/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "com.github.rmtmckenzie.native_device_orientation-release-25:/layout/notification_action_tombstone.xml",
+        "source": "com.github.rmtmckenzie.native_device_orientation-core-1.13.1-14:/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "com.github.rmtmckenzie.native_device_orientation-release-25:/layout/notification_template_icon_group.xml",
+        "source": "com.github.rmtmckenzie.native_device_orientation-core-1.13.1-14:/layout/notification_template_icon_group.xml"
+    }
+]

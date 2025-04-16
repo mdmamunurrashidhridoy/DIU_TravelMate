@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/layout/ime_secondary_split_test_activity.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/layout/ime_secondary_split_test_activity.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/layout/notification_template_icon_group.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/layout/notification_action.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/layout/notification_action.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/layout/ime_base_split_test_activity.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/layout/ime_base_split_test_activity.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/layout/notification_action_tombstone.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/layout/notification_template_part_chronometer.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/layout/notification_template_part_time.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/layout/custom_dialog.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/layout/notification_template_custom_big.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/layout/notification_template_custom_big.xml"
+    }
+]

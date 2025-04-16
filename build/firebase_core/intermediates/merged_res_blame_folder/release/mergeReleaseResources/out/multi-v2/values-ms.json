@@ -1,0 +1,82 @@
+{
+    "logs": [
+        {
+            "outputFile": "io.flutter.plugins.firebase.core.firebase_core-release-27:/values-ms/values-ms.xml",
+            "map": [
+                {
+                    "source": "/home/hridoy/.gradle/caches/8.10.2/transforms/7f46bbd13206153774356ca6103aa890/transformed/core-1.13.1/res/values-ms/values-ms.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,150,252,349,459,565,683,798",
+                        "endColumns": "94,101,96,109,105,117,114,100",
+                        "endOffsets": "145,247,344,454,560,678,793,894"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,10",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,150,252,349,459,565,683,944",
+                        "endColumns": "94,101,96,109,105,117,114,100",
+                        "endOffsets": "145,247,344,454,560,678,793,1040"
+                    }
+                },
+                {
+                    "source": "/home/hridoy/.gradle/caches/8.10.2/transforms/d57a1f6c01347d085f9144e73c250e20/transformed/jetified-play-services-basement-18.3.0/res/values-ms/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "141",
+                        "endOffsets": "336"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "798",
+                        "endColumns": "145",
+                        "endOffsets": "939"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "io.flutter.plugins.firebase.core.firebase_core-mergeReleaseResources-25:/values-ms/values-ms.xml",
+            "map": [
+                {
+                    "source": "/home/hridoy/.gradle/caches/8.10.2/transforms/7f46bbd13206153774356ca6103aa890/transformed/core-1.13.1/res/values-ms/values-ms.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,150,252,349,459,565,683,798",
+                        "endColumns": "94,101,96,109,105,117,114,100",
+                        "endOffsets": "145,247,344,454,560,678,793,894"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,10",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,150,252,349,459,565,683,944",
+                        "endColumns": "94,101,96,109,105,117,114,100",
+                        "endOffsets": "145,247,344,454,560,678,793,1040"
+                    }
+                },
+                {
+                    "source": "/home/hridoy/.gradle/caches/8.10.2/transforms/d57a1f6c01347d085f9144e73c250e20/transformed/jetified-play-services-basement-18.3.0/res/values-ms/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "141",
+                        "endOffsets": "336"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "798",
+                        "endColumns": "145",
+                        "endOffsets": "939"
+                    }
+                }
+            ]
+        }
+    ]
+}

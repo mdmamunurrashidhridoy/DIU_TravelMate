@@ -1,0 +1,31 @@
+<variant
+    name="release"
+    package="net.tlserver6y.flutter_rotation_sensor"
+    minSdkVersion="19"
+    targetSdkVersion="19"
+    mergedManifest="/home/hridoy/Projects/DIU_TravelMate/build/flutter_rotation_sensor/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml"
+    manifestMergeReport="/home/hridoy/Projects/DIU_TravelMate/build/flutter_rotation_sensor/outputs/logs/manifest-merger-release-report.txt"
+    proguardFiles="/home/hridoy/Projects/DIU_TravelMate/build/flutter_rotation_sensor/intermediates/default_proguard_files/global/proguard-android.txt-8.7.0"
+    partialResultsDir="/home/hridoy/Projects/DIU_TravelMate/build/flutter_rotation_sensor/intermediates/lint_partial_results/release/lintAnalyzeRelease/out">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src/main/AndroidManifest.xml"
+        javaDirectories="src/main/java:src/main/kotlin:src/release/java:src/release/kotlin"
+        resDirectories="src/main/res:src/release/res"
+        assetsDirectories="src/main/assets:src/release/assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      classOutputs="/home/hridoy/Projects/DIU_TravelMate/build/flutter_rotation_sensor/intermediates/javac/release/compileReleaseJavaWithJavac/classes:/home/hridoy/Projects/DIU_TravelMate/build/flutter_rotation_sensor/tmp/kotlin-classes/release:/home/hridoy/Projects/DIU_TravelMate/build/flutter_rotation_sensor/intermediates/compile_r_class_jar/release/generateReleaseRFile/R.jar"
+      type="MAIN"
+      applicationId="net.tlserver6y.flutter_rotation_sensor"
+      generatedSourceFolders="/home/hridoy/Projects/DIU_TravelMate/build/flutter_rotation_sensor/generated/ap_generated_sources/release/out"
+      generatedResourceFolders="/home/hridoy/Projects/DIU_TravelMate/build/flutter_rotation_sensor/generated/res/resValues/release"
+      desugaredMethodsFiles="/home/hridoy/.gradle/caches/8.10.2/transforms/2dc7de93f8b193b2cc14f6d9be0941cd/transformed/D8BackportedDesugaredMethods.txt">
+  </artifact>
+</variant>

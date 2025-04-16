@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "io.flutter.plugins.googlemaps.google_maps_flutter_android-release-30:/drawable-v21/notification_action_background.xml",
+        "source": "io.flutter.plugins.googlemaps.google_maps_flutter_android-core-1.13.1-15:/drawable-v21/notification_action_background.xml"
+    }
+]

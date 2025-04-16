@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/drawable/notification_bg.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/drawable/notification_tile_bg.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/drawable/notification_bg_low.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/drawable/notification_icon_background.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/drawable/notification_icon_background.xml"
+    }
+]

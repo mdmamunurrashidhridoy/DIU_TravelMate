@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "net.tlserver6y.flutter_rotation_sensor-release-25:/drawable-v21/notification_action_background.xml",
+        "source": "net.tlserver6y.flutter_rotation_sensor-core-1.13.1-14:/drawable-v21/notification_action_background.xml"
+    }
+]

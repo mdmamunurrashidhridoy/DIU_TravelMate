@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/home/hridoy/.pub-cache/hosted/pub.dev/native_device_orientation-2.0.3/android"
+    name=":native_device_orientation"
+    type="LIBRARY"
+    maven="com.github.rmtmckenzie.native_device_orientation:native_device_orientation:1.0"
+    agpVersion="8.7.0"
+    buildFolder="/home/hridoy/Projects/DIU_TravelMate/build/native_device_orientation"
+    bootClassPath="/home/hridoy/Android/Sdk/platforms/android-33/android.jar:/home/hridoy/Android/Sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-33"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

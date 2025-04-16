@@ -1,0 +1,1 @@
+com.github.rmtmckenzie.native_device_orientation
