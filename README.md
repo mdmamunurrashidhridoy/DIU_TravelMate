@@ -82,7 +82,7 @@
    ```
 
 ## Documentation
-📄 [View PDF in Google Drive](https://drive.google.com/file/d/1fnBlvlYVlCng2TISymz8sSnuE4lZXsPD/view?usp=sharing)
+📄 [View PDF in Google Drive](https://drive.google.com/file/d/1fnBlvlYVlCng2TISymz8sSnuE4lZXsPD/view?usp=sharing) </br>
 [View Overleaf Documentation](https://www.overleaf.com/read/bpbrwmgpbccc#7e7bb7)
 
 ## 👥 Team
